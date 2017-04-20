@@ -27,9 +27,7 @@ class RecordsScreen extends React.Component {
   };
 
   componentWillMount() {
-    debugger;
     this.props.getRecordsAction();
-    debugger;
   }
 
   render() {

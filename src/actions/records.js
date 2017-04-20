@@ -10,7 +10,6 @@ function fetchRecords(records: Array<Object>): Object {
 
 export function getRecords(): Promise {
   return async (dispatch) => {
-    debugger;
     const response = await api.get('/ai/recording/list/');
 
     dispatch(fetchRecords(response.data.results));
