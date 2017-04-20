@@ -4,8 +4,7 @@ Project based on React/Redux architeture, Webpack for the tooling and Express fo
 
 ## Live demo
 
-It hosted in Heroku<br>
-https://i2x-project.herokuapp.com/login
+It's hosted in Heroku: [https://i2x-project.herokuapp.com/](https://i2x-project.herokuapp.com/)
 
 ### Authentication
 To access the restrict area use the user
@@ -101,7 +100,7 @@ npm run lint
 Run tests
 
 ```
-npm run tests
+npm test
 ```
 
 ## Deploy
