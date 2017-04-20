@@ -1,0 +1,35 @@
+@require './colors';
+@require './type';
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font: $font.size.base\/$lineHeight $font.family;
+  background-color: $colors.light;
+  color: $colors.dark;
+  fill: $colors.dark;
+  margin: 0;
+}
+
+// template root
+:global([data-reactroot]) {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+audio,
+img {
+  max-width: 100%;
+}
+
+ul { padding-left: 1rem; }
