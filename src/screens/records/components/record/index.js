@@ -9,6 +9,7 @@ import Icon from 'src/ui/components/icon';
 import Rating from 'src/ui/components/rating';
 import { setRating as setRatingAction } from 'src/actions/records';
 import classNames from 'classnames';
+import moment from 'moment';
 import styles from './styles.styl';
 
 class Record extends React.Component {
@@ -50,19 +51,20 @@ class Record extends React.Component {
       created,
     } = this.props.record;
 
+    const momentDuration = moment.duration(duration, 'seconds');
+    const minutes = momentDuration.minutes();
+    const seconds = momentDuration.seconds();
+
     return (
       <Col className={classNames(styles.record)} gutter="medium">
         <Grid>
           <Col size={{ small: 12, medium: 4 }}>
             <Col gutter={{ bottom: 'medium' }}>
-              <Grid>
-                <Col size={6}>
-                  <Icon name="calendar" /> Created: {created}
-                </Col>
-                <Col size={6}>
-                  <Icon name="clock" /> Time: {duration}
-                </Col>
-              </Grid>
+              <Icon name="calendar" /> Created: {moment(created).format('LL')}
+            </Col>
+
+            <Col gutter={{ bottom: 'medium' }}>
+              <Icon name="clock" /> Time:&nbsp; {minutes}:{seconds}
             </Col>
 
             <Col gutter={{ bottom: 'medium' }}>
