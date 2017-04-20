@@ -32,7 +32,7 @@ function authenticate(data: { token: string }): void {
 
   const api: Object = _getApiInstance();
 
-  api.defaults.headers.common.Authorization = jwtToken;
+  api.defaults.headers.Authorization = jwtToken;
 }
 
 function expire(): void {
@@ -40,7 +40,7 @@ function expire(): void {
 
   const api: Object = _getApiInstance();
 
-  api.defaults.headers.common.Authorization = null;
+  api.defaults.headers.Authorization = null;
 }
 
 function isAuthenticated(): boolean {
