@@ -72,7 +72,7 @@ All the tests are available in the `__tests__` folders around the project. There
 
 To run the tests use:
 ```
-npm run tests
+npm test
 ```
 
 ## Tasks
