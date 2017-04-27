@@ -31,7 +31,7 @@ class AppRouter extends React.Component {
               ? <Redirect to="/records" />
               : <LoginScreen history={history} />
           )} />
-          {<RestrictRoute path="/records" component={RecordsScreen} />}
+          <RestrictRoute path="/records" component={RecordsScreen} />
           <Route component={NotFoundScreen}/>
         </Switch>
       </ConnectedRouter>
